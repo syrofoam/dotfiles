@@ -94,6 +94,7 @@ local gui_editor   = "gvim"
 local browser      = "firefox"
 local guieditor    = "kate"
 local scrlocker    = "slock"
+local rofi_settings = "rofi -show run"
 
 awful.util.terminal = terminal
 awful.util.tagnames = { "1", "2", "3", "4", "5" }
@@ -260,6 +261,12 @@ globalkeys = my_table.join(
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
 
+    -- Non-empty tag browsing
+    awful.key({ altkey }, "Left", function () lain.util.tag_view_nonempty(-1) end,
+              {description = "view  previous nonempty", group = "tag"}),
+    awful.key({ altkey }, "Right", function () lain.util.tag_view_nonempty(1) end,
+              {description = "view  previous nonempty", group = "tag"}),
+
     -- Default client focus
     awful.key({ altkey,           }, "j",
         function ()
@@ -356,7 +363,7 @@ globalkeys = my_table.join(
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
-    awful.key({ modkey, "Shift"   }, "o", awesome.quit,
+    awful.key({ modkey, "Shift"   }, "k", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
 
     awful.key({ altkey, "Shift"   }, "l",     function () awful.tag.incmwfact( 0.05)          end,
@@ -511,8 +518,7 @@ globalkeys = my_table.join(
         {description = "show rofi", group = "launcher"}),
     --]]
     -- Prompt
-    awful.key({ modkey }, "r", function () awful.screen.focused().mypromptbox:run() end,
-              {description = "run prompt", group = "launcher"}),
+    awful.key({ modkey }, "r", function () awful.util.spawn(rofi_settings) end),
 
     awful.key({ modkey }, "x",
               function ()
