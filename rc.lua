@@ -93,7 +93,9 @@ local gui_editor   = "gvim"
 local browser      = "firefox"
 local guieditor    = "kate"
 local scrlocker    = "slock"
-local rofi_settings = "rofi -show run"
+local rofi_settings = "rofi -show drun"
+local flameshot = "flameshot gui"
+local fragments = "fragments"
 
 awful.util.terminal = terminal
 awful.util.tagnames = { "1", "2", "3", "4", "5" }
@@ -494,6 +496,10 @@ globalkeys = my_table.join(
               {description = "run browser", group = "launcher"}),
     awful.key({ modkey }, "a", function () awful.spawn(guieditor) end,
               {description = "run gui editor", group = "launcher"}),
+    awful.key({ modkey, "Shift" }, "s", function () awful.spawn(flameshot) end,
+              {description = "screenshot", group = "hotkeys"}),
+    awful.key({ modkey, }, "t", function () awful.spawn(fragments) end,
+              {description = "torrent client", group = "hotkeys"}),
 
     -- Default
     --[[ Menubar
@@ -517,6 +523,7 @@ globalkeys = my_table.join(
         {description = "show rofi", group = "launcher"}),
     --]]
     -- Prompt
+    
     awful.key({ modkey }, "r", function () awful.util.spawn(rofi_settings) end),
 
     awful.key({ modkey }, "x",
@@ -557,6 +564,7 @@ clientkeys = my_table.join(
             c.minimized = true
         end ,
         {description = "minimize", group = "client"}),
+	--Probably want to rebind
     awful.key({ modkey,           }, "m",
         function (c)
             c.maximized = not c.maximized
@@ -660,14 +668,16 @@ awful.rules.rules = {
 
     -- Titlebars false no titlebars
     { rule_any = { type = { "dialog", "normal" } },
-      properties = { titlebars_enabled = false } },
+      properties = { titlebars_enabled = true } },
 
     -- Set Firefox to always map on the first tag on screen 1.
-    { rule = { class = "Firefox" },
-      properties = { screen = 1, tag = awful.util.tagnames[1] } },
+    --{ rule = { class = "Firefox" },
+    --  properties = { screen = 1, tag = awful.util.tagnames[1] } },
 
-    { rule = { class = "Gimp", role = "gimp-image-window" },
-          properties = { maximized = true } },
+    --{ rule = { class = "Discord", role = "Discord." },
+    --      properties = { maximized = true } },
+    { rule = { class = "Discord" },
+          properties = { floating = true } },
 }
 -- }}}
 
@@ -755,7 +765,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- transperency shell
 awful.util.spawn_with_shell("compton")
-
+awful.util.spawn_with_shell("flameshot")
 -- possible workaround for tag preservation when switching back to default screen:
 -- https://github.com/lcpz/awesome-copycats/issues/251
 -- }}}
