@@ -65,3 +65,6 @@ end
     function ....
     cd ../../../..
 end
+    function fnd
+    find . -maxdepth 4 | fzf
+end
