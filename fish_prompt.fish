@@ -68,3 +68,6 @@ end
     function fnd
     find . -maxdepth 4 | fzf
 end
+    function hist
+    history | fzf +s --tac
+end
