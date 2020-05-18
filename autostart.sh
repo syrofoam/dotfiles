@@ -2,6 +2,7 @@
 # Status script for dwm
 # colours: 01:normal 02:white 03:red 04:green 05:yellow 06:blue
 # 07:cyan 08:magenta 09:grey
+# Copyright (c) 2013-2019 Stian
 tem(){
  tem="$(</sys/class/thermal/thermal_zone1/temp)"
  echo -e "${tem%000*}"
@@ -11,11 +12,11 @@ bat(){
   onl="$(</sys/class/power_supply/AC/online)"
   charge="$(</sys/class/power_supply/BAT0/capacity)"
   if [[ $onl -eq 0 && $charge -ge 10 ]]; then
-     printf "%b" "BAT \x04$charge%\x01"
+     printf "%b" "BAT $charge%\x01"
   elif [[ $onl -eq 0 && $charge -le 5 ]]; then
-    printf "%b" "BAT \x03$charge%\x01"
+    printf "%b" "BAT $charge%\x01"
   else
-    printf "%b" "AC \x06$charge%\x01"
+    printf "%b" "AC $charge%\x01"
   fi
 }
 
