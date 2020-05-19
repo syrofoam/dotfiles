@@ -1,2 +1,5 @@
-# A few config, some howtos.
-Feel free as in freedom!
+# A few configuration files.
+---------------------------
+*Some might call it dotfiles
+
+¤fork what you need.
