@@ -70,3 +70,5 @@ set backspace=indent,eol,start
 colorscheme peachpuff
 "prevents truncuated yanks deletes, etc.
 set viminfo='20,<1000,s1000
+set number 
+"set relativenumber
