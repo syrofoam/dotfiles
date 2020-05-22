@@ -64,6 +64,9 @@ endif
 "Calculator Kalyle+CTRL-B
 inoremap <C-B> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
 nmap <C-Tab> :tabnext<CR>
-map <F8> :NERDTreeToggle<CR>
+"map <F8> :NERDTreeToggle<CR>
 ":undolist ! Sjekke undos
 set backspace=indent,eol,start
+colorscheme peachpuff
+"prevents truncuated yanks deletes, etc.
+set viminfo='20,<1000,s1000
