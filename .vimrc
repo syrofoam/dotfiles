@@ -72,3 +72,15 @@ colorscheme peachpuff
 set viminfo='20,<1000,s1000
 set number 
 "set relativenumber
+set noshowmode
+call plug#begin()
+Plug 'itchyny/lightline.vim'
+Plug 'ap/vim-css-color'
+call plug#end()
+let g:lightline = {
+	\ 'colorscheme': 'wombat',
+	\ }
+"test other highlight color
+highlight clear CursorLine to clear the current cusorline hl
+highlight CursorLine gui=underline cterm=underline 
+highlight Visual cterm=bold ctermbg=Green ctermfg=NONE
