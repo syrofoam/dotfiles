@@ -61,10 +61,22 @@ endif
 if !isdirectory(expand(&directory))
     call mkdir(expand(&directory), "p")
 endif
-"Calculator Kalyle+CTRL-B
-inoremap <C-B> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
-nmap <C-Tab> :tabnext<CR>
-"map <F8> :NERDTreeToggle<CR>
+"split and switch with hjkl
+map <C-O> :Sexplore<CR>
+nmap <C-N> :sp<esc> 
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+"let g:netrw_banner = 0
+"let g:netrw_liststyle = 3
+"let g:netrw_browse_split = 4
+"let g:netrw_altv = 1
+let g:netrw_winsize = 25
+"augroup ProjectDrawer
+"	  autocmd!
+"	    autocmd VimEnter * :Vexplore
+"    augroup END
 ":undolist ! Sjekke undos
 set backspace=indent,eol,start
 colorscheme peachpuff
