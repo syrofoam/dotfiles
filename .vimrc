@@ -1,4 +1,5 @@
-" kurs {{{ CTRL + N for autocomplete husk
+" :sort u / TO remove duplicates
+set autoindent
 set nocompatible
 filetype plugin on
 set path+=**
