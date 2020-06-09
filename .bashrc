@@ -20,7 +20,9 @@ fi
 alias mupdf='mupdf-gl -I'
 alias ll='exa -l'
 alias la='lsd -a'
-
+alias cp='cp -iv'
+alias rm='rm -i'
+alias mv='mv -i'
 
 #export FZF_CTRL_R_OPTS='--sort --exact'
 source /usr/share/fzf/key-bindings.bash
@@ -37,7 +39,7 @@ GREEN='\033[0;92m'
 
 #Greeter
 uname --kernel-release
-figlet haxx | lolcat
+
 echo -e "${YELLOW}iptables ${GREEN}[OK]"
 echo -e "${YELLOW}google tracking ${RED}[Failed]"
 echo -e "${RED}welcome to ${MAGENTA}${HOSTNAME} ${BLUE}${USER}"
