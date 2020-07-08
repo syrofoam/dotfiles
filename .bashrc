@@ -5,7 +5,10 @@
 # If not running interactively, don't do anything
 #[[ $- != *i* ]] && return
 export HISTSIZE=10000
-export HISTFILESIZE=2000
+export HISTFILESIZE=10000
+export TUIR_EDITOR=vim
+export BROWSER=firefox
+export XDG_DATA_DRIRS=/var/lib/flatpak/exports/share
 
 alias ls='ls --color=auto'
 alias gl='git --no-pager log -n24 --pretty=oneline --abbrev-commit --graph'
@@ -21,7 +24,7 @@ alias mupdf='mupdf-gl -I'
 alias ll='exa -l'
 alias la='lsd -a'
 alias cp='cp -iv'
-alias rm='rm -i'
+alias rm='rm -I'
 alias mv='mv -i'
 
 #export FZF_CTRL_R_OPTS='--sort --exact'
