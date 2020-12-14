@@ -127,11 +127,10 @@ colorscheme default
 set viminfo='20,<1000,s1000
 set number 
 set noshowmode
-call plug#begin()
-"Plug 'itchyny/lightline.vim'
+"call plug#begin()
 "Plug 'ap/vim-css-color'
-Plug 'dracula/vim', { 'as': 'dracula' }
-call plug#end()
+"Plug 'dracula/vim', { 'as': 'dracula' }
+"call plug#end()
 "let g:lightline = {
 "	\ 'colorscheme': 'wombat',
 "	\ }
@@ -143,5 +142,3 @@ highlight Visual cterm=bold,underline ctermbg=Black ctermfg=NONE
 set scrolloff=999
 "REPLACE & SEARCH "Insert replace text AND /"
 nnoremap <C-g> :%s//g<left><left>
-"VIM tehemei
-"packadd! dracula
