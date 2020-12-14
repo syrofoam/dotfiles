@@ -1,0 +1,160 @@
+# package.use# required by x11-drivers/nvidia-drivers-455.45.01-r1::gentoo[X]
+# required by nvidia-drivers (argument)
+>=x11-libs/libvdpau-1.4 abi_x86_32
+# required by x11-drivers/nvidia-drivers-455.45.01-r1::gentoo[X]
+# required by nvidia-drivers (argument)
+>=media-libs/libglvnd-1.3.2-r2 abi_x86_32
+# required by x11-drivers/nvidia-drivers-455.45.01-r1::gentoo[X]
+# required by nvidia-drivers (argument)
+>=x11-libs/libX11-1.7.0 abi_x86_32
+# required by x11-drivers/nvidia-drivers-455.45.01-r1::gentoo[X]
+# required by nvidia-drivers (argument)
+>=x11-libs/libXext-1.3.4 abi_x86_32
+# required by x11-drivers/nvidia-drivers-455.45.01-r1::gentoo[X]
+# required by nvidia-drivers (argument)
+>=sys-libs/zlib-1.2.11-r3 abi_x86_32
+# required by x11-libs/libX11-1.7.0::gentoo
+# required by x11-libs/libXext-1.3.4::gentoo
+# required by x11-libs/libXv-1.0.11-r2::gentoo
+# required by x11-drivers/nvidia-drivers-455.45.01-r1::gentoo[tools]
+# required by nvidia-drivers (argument)
+>=x11-libs/libxcb-1.14 abi_x86_32
+# required by x11-libs/libxcb-1.14::gentoo
+# required by x11-libs/libX11-1.7.0::gentoo
+# required by x11-libs/libXext-1.3.4::gentoo
+# required by x11-libs/libXv-1.0.11-r2::gentoo
+# required by x11-drivers/nvidia-drivers-455.45.01-r1::gentoo[tools]
+# required by nvidia-drivers (argument)
+>=x11-libs/libXau-1.0.9-r1 abi_x86_32
+# required by x11-libs/libxcb-1.14::gentoo
+# required by x11-libs/libX11-1.7.0::gentoo
+# required by x11-libs/libXext-1.3.4::gentoo
+# required by x11-libs/libXv-1.0.11-r2::gentoo
+# required by x11-drivers/nvidia-drivers-455.45.01-r1::gentoo[tools]
+# required by nvidia-drivers (argument)
+>=x11-libs/libXdmcp-1.1.3 abi_x86_32
+# required by x11-libs/libxcb-1.14::gentoo
+# required by x11-libs/libX11-1.7.0::gentoo
+# required by x11-libs/libXext-1.3.4::gentoo
+# required by x11-libs/libXv-1.0.11-r2::gentoo
+# required by x11-drivers/nvidia-drivers-455.45.01-r1::gentoo[tools]
+# required by nvidia-drivers (argument)
+>=x11-base/xcb-proto-1.14.1 abi_x86_32
+# required by xfce-base/xfce4-panel-4.15.5::gentoo
+# required by xfce-base/thunar-4.15.3::gentoo[trash-panel-plugin]
+# required by xfce-base/xfdesktop-4.15.1::gentoo[thunar]
+# required by xfce-base/xfce4-meta-4.16_pre2::gentoo
+# required by xfce4-meta (argument)
+>=dev-libs/libdbusmenu-16.04.0-r1 gtk3
+# required by app-shells/fish-3.1.2::gentoo
+# required by fish (argument)
+>=dev-libs/libpcre2-10.36 pcre32
+# required by sys-boot/os-prober-1.77::gentoo
+# required by os-prober (argument)
+>=sys-boot/grub-2.05_alpha20200310-r1 mount
+# required by games-util/steam-launcher-1.0.0.67::steam-overlay[steamruntime]
+# required by games-util/steam-launcher (argument)
+>=virtual/opengl-7.0-r2 abi_x86_32
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.67::steam-overlay[steamruntime]
+# required by games-util/steam-launcher (argument)
+>=media-libs/mesa-20.3.0 abi_x86_32
+# required by media-libs/mesa-20.3.0::gentoo
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.67::steam-overlay[steamruntime]
+# required by games-util/steam-launcher (argument)
+>=dev-libs/expat-2.2.10 abi_x86_32
+# required by media-libs/mesa-20.3.0::gentoo[lm-sensors,gallium]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.67::steam-overlay[steamruntime]
+# required by games-util/steam-launcher (argument)
+>=sys-apps/lm-sensors-3.6.0 abi_x86_32
+# required by media-libs/mesa-20.3.0::gentoo
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.67::steam-overlay[steamruntime]
+# required by games-util/steam-launcher (argument)
+>=x11-libs/libdrm-2.4.103 abi_x86_32
+# required by media-libs/mesa-20.3.0::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.67::steam-overlay[steamruntime]
+# required by games-util/steam-launcher (argument)
+>=x11-libs/libxshmfence-1.3-r2 abi_x86_32
+# required by media-libs/mesa-20.3.0::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.67::steam-overlay[steamruntime]
+# required by games-util/steam-launcher (argument)
+>=x11-libs/libXdamage-1.1.5 abi_x86_32
+# required by media-libs/mesa-20.3.0::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.67::steam-overlay[steamruntime]
+# required by games-util/steam-launcher (argument)
+>=x11-libs/libXxf86vm-1.1.4-r2 abi_x86_32
+# required by x11-libs/libXdamage-1.1.5::gentoo
+# required by media-libs/mesa-20.3.0::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.67::steam-overlay[steamruntime]
+# required by games-util/steam-launcher (argument)
+>=x11-libs/libXfixes-5.0.3-r3 abi_x86_32
+# required by media-libs/mesa-20.3.0::gentoo[zstd]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.67::steam-overlay[steamruntime]
+# required by games-util/steam-launcher (argument)
+>=app-arch/zstd-1.4.5 abi_x86_32
+# required by media-libs/mesa-20.3.0::gentoo[-video_cards_radeonsi,-opencl,gallium,-video_cards_r600,-video_cards_radeon,llvm]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.67::steam-overlay[steamruntime]
+# required by games-util/steam-launcher (argument)
+>=sys-devel/llvm-11.0.0 abi_x86_32
+# required by media-libs/mesa-20.3.0::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.67::steam-overlay[steamruntime]
+# required by games-util/steam-launcher (argument)
+>=x11-libs/libXrandr-1.5.2 abi_x86_32
+# required by x11-libs/libXrandr-1.5.2::gentoo
+# required by media-libs/mesa-20.3.0::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.67::steam-overlay[steamruntime]
+# required by games-util/steam-launcher (argument)
+>=x11-libs/libXrender-0.9.10-r2 abi_x86_32
+# required by sys-devel/llvm-11.0.0::gentoo[libffi]
+# required by media-libs/mesa-20.3.0::gentoo[-video_cards_radeonsi,-opencl,gallium,-video_cards_r600,-video_cards_radeon,llvm]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.67::steam-overlay[steamruntime]
+# required by games-util/steam-launcher (argument)
+>=dev-libs/libffi-3.3-r2 abi_x86_32
+# required by sys-libs/gpm-1.20.7-r2::gentoo
+# required by www-client/w3m-0.5.3_p20190105::gentoo[gpm]
+# required by virtual/w3m-0::gentoo
+# required by app-text/xmlto-0.0.28-r3::gentoo[text]
+# required by x11-misc/shared-mime-info-2.0-r2::gentoo
+# required by gnome-extra/zenity-3.32.0::gentoo
+# required by games-util/steam-launcher-1.0.0.67::steam-overlay
+# required by games-util/steam-launcher (argument)
+>=sys-libs/ncurses-6.2-r1 abi_x86_32
+# required by sys-devel/llvm-11.0.0::gentoo[xml]
+# required by media-libs/mesa-20.3.0::gentoo[-video_cards_radeonsi,-opencl,gallium,-video_cards_r600,-video_cards_radeon,llvm]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.67::steam-overlay[steamruntime]
+# required by games-util/steam-launcher (argument)
+>=dev-libs/libxml2-2.9.10-r4 abi_x86_32
+# required by dev-libs/libxml2-2.9.10-r4::gentoo[icu]
+# required by sys-devel/llvm-11.0.0::gentoo[xml]
+# required by media-libs/mesa-20.3.0::gentoo[-video_cards_radeonsi,-opencl,gallium,-video_cards_r600,-video_cards_radeon,llvm]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.67::steam-overlay[steamruntime]
+# required by games-util/steam-launcher (argument)
+>=dev-libs/icu-68.1 abi_x86_32
+# required by sys-libs/ncurses-6.2-r1::gentoo[gpm]
+# required by sys-devel/llvm-11.0.0::gentoo[ncurses]
+# required by media-libs/mesa-20.3.0::gentoo[-video_cards_radeonsi,-opencl,gallium,-video_cards_r600,-video_cards_radeon,llvm]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by games-util/steam-launcher-1.0.0.67::steam-overlay[steamruntime]
+# required by games-util/steam-launcher (argument)
+>=sys-libs/gpm-1.20.7-r2 abi_x86_32
+>=sys-libs/ncurses-6.2-r1 -gpm
+# required by dev-libs/libxml2-2.9.10-r4::gentoo[icu]
+# required by gnome-base/librsvg-2.48.8::gentoo
+# required by x11-misc/rofi-1.5.4-r1::gentoo
+# required by @selected
+# required by @world (argument)
+=dev-libs/icu-67.1 abi_x86_32
