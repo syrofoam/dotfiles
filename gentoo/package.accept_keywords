@@ -1,0 +1,4 @@
+#dev-qt/qtgui-5.15.1 ~amd64
+x11-drivers/nvidia-drivers ~amd64
+sys-kernel/gentoo-kernel-bin ~amd64
+net-im/signal-desktop-bin ~amd64
