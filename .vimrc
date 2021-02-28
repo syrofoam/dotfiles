@@ -51,7 +51,7 @@ map <F5> :set hlsearch<CR>
 map <F6> :hi Normal guibg=NONE ctermbg=NONE<CR>
 set listchars=tab:→\ ,eol:↲,nbsp:␣,space:·,trail:·,extends:⟩,precedes:⟨
 "set listchars=eol:´,tab:>·,trail:~,extends:>,precedes:<,space:·
-set mouse=a
+set mouse=r
 "Search settings
 set incsearch
 set linebreak
