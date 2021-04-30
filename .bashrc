@@ -8,7 +8,7 @@ export HISTSIZE=10000
 export HISTFILESIZE=10000
 export TUIR_EDITOR=vim
 export BROWSER=firefox
-export XDG_DATA_DRIRS=/var/lib/flatpak/exports/share
+#export XDG_DATA_DRIRS=/var/lib/flatpak/exports/share ?
 
 alias ls='ls --color=auto'
 alias gl='git --no-pager log -n24 --pretty=oneline --abbrev-commit --graph'
@@ -28,8 +28,8 @@ alias rm='rm -I'
 alias mv='mv -i'
 
 #export FZF_CTRL_R_OPTS='--sort --exact'
-source /usr/share/fzf/key-bindings.bash
-source /usr/share/bash-completion/bash_completion
+#source /usr/share/fzf/key-bindings.bash
+#source /usr/share/bash-completion/bash_completion
 alias ..="cd .."
 
 #Colors
