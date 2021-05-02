@@ -49,9 +49,12 @@ map <F3> :set list!<CR>
 map <F4> :colorscheme<Space>
 map <F5> :set hlsearch<CR>
 map <F6> :hi Normal guibg=NONE ctermbg=NONE<CR>
+map <F7> :set spell spelllang=en_us
+map <F8> :set spell spelllang=""<CR>
+map <F12> :ColorToggle<CR>
 set listchars=tab:→\ ,eol:↲,nbsp:␣,space:·,trail:·,extends:⟩,precedes:⟨
 "set listchars=eol:´,tab:>·,trail:~,extends:>,precedes:<,space:·
-set mouse=r
+set mouse=a
 "Search settings
 set incsearch
 set linebreak
@@ -121,13 +124,14 @@ let g:netrw_winsize = 25
 "	    autocmd VimEnter * :Vexplore
 "    augroup END
 set backspace=indent,eol,start
-"colorscheme default
-colorscheme default 
+colorscheme pablo
+"colorscheme ron
 "prevents truncuated yanks deletes, etc.
 set viminfo='20,<1000,s1000
 set number 
 set noshowmode
 "call plug#begin()
+"Plug 'itchyny/lightline.vim'
 "Plug 'ap/vim-css-color'
 "Plug 'dracula/vim', { 'as': 'dracula' }
 "call plug#end()
@@ -139,6 +143,14 @@ highlight clear CursorLine to clear the current cusorline hl
 highlight CursorLine gui=underline cterm=underline 
 highlight Visual cterm=bold,underline ctermbg=Black ctermfg=NONE
 "To center editor dot "mouse" in some "term"
-set scrolloff=999
+"Make edit in middle of screen while scrolling.
+"set scrolloff=999
 "REPLACE & SEARCH "Insert replace text AND /"
 nnoremap <C-g> :%s//g<left><left>
+"VIM tehemei
+"packadd! dracula
+" Wayland Clipboard Support
+xnoremap "+y y:call system("wl-copy", @")<cr>  
+nnoremap "+p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p  
+nnoremap "*p :let @"=substitute(system("wl-paste --no-newline --primary"), '<C-v><C-m>', '', 'g')<cr>p 
+set paste
