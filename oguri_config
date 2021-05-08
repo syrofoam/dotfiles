@@ -1,0 +1,5 @@
+[output eDP-1]
+image=~/Pictures/gifs/giphy3.gif
+filter=nearest
+scaling-mode=fill
+anchor=center
