@@ -28,7 +28,6 @@ export HISTFILESIZE=10000
 export TUIR_EDITOR=vim
 export BROWSER=firefox
 #Colors
-. "/home/stian/.local/share/lscolors.sh"
 RED='\033[0;31m'
 BLUE='\033[0;34m'
 YELLOW='\033[0;93m'
