@@ -3,15 +3,18 @@ set encoding=utf-8
 set ttyfast "I have gpu accel term
 " Usfull tips::::::::::::::::::::::::::::::::::::::::::::::::::::::
 " "UNHOLY VISUAL MODE" is "CTRL-V"
-" ":sort" u / TO remove duplicates
+" ":sort" mnrmnaughmnrmnaughmnrmnaughmnrmnaughmnrmnaughmnrmnaughysFire� >yo dawg iysFire� >yo dawg iysFire� >yo dawg iu / TO remove duplicates
 " ":,$s/^/#" To comment every "SEARCH REPLACE" line with #
 " "!!" to start "bash command". ".!cal"
 " ":undolist" for list of changes to "undo"
 " "gg" to "start" or "G" to "go to end" or "%"
+" "$" end of line.
 " "w" to "JUMP" words forward.
 " "e" move forwar "JUMP Faster"
 " "b" jump words "BACKWARDS".
 " search and remove "s/input//g".
+
+
 " use "x" to delete in command mode.
 " "A" will "APPEND"to end of line.
 " "dw" delete word. "d2w" delete two.
@@ -49,35 +52,42 @@ map <F3> :set list!<CR>
 map <F4> :colorscheme<Space>
 map <F5> :set hlsearch<CR>
 map <F6> :hi Normal guibg=NONE ctermbg=NONE<CR>
-map <F7> :set spell spelllang=en_us
-map <F8> :set spell spelllang=""<CR>
-map <F12> :ColorToggle<CR>
+map <F7> :set spelllang=en_US<CR>
+map <F8> :set nospell<CR>
 set listchars=tab:→\ ,eol:↲,nbsp:␣,space:·,trail:·,extends:⟩,precedes:⟨
 "set listchars=eol:´,tab:>·,trail:~,extends:>,precedes:<,space:·
-set mouse=a
+
+set mouse=r
 "Search settings
 set incsearch
 set linebreak
 nnoremap <c-f> :nohlsearch<CR>
+
 filetype indent on
 set history=1000
 " Undo med u redo med ctrl+r
 set undofile
 set undoreload=2500
+
 au FocusLost * :wa
 "resize snadder
 au VimResized * exe "normal! \<c-w="
 "When opening edited files "goto" same line number
 augroup line_return
+
     au!
     au BufReadPost *
         \ if line("'\"") > 0 && line("'\"") <= line("$") |
         \     execute 'normal! g`"zvzz' |
         \ endif
+
 augroup END
 " Backups make backup so you can "undo" changes from backups.
 set backup                        " enable backups
 set noswapfile                    " it's 2019, Vim.
+
+
+
 
 " "Di()" to "Delete" inside "quotes"
 " "dd+p" is "Delete and paste"
@@ -124,14 +134,13 @@ let g:netrw_winsize = 25
 "	    autocmd VimEnter * :Vexplore
 "    augroup END
 set backspace=indent,eol,start
-colorscheme pablo
-"colorscheme ron
+"colorscheme default
+colorscheme darkblue
 "prevents truncuated yanks deletes, etc.
 set viminfo='20,<1000,s1000
 set number 
 set noshowmode
 "call plug#begin()
-"Plug 'itchyny/lightline.vim'
 "Plug 'ap/vim-css-color'
 "Plug 'dracula/vim', { 'as': 'dracula' }
 "call plug#end()
@@ -143,14 +152,6 @@ highlight clear CursorLine to clear the current cusorline hl
 highlight CursorLine gui=underline cterm=underline 
 highlight Visual cterm=bold,underline ctermbg=Black ctermfg=NONE
 "To center editor dot "mouse" in some "term"
-"Make edit in middle of screen while scrolling.
-"set scrolloff=999
+set scrolloff=999
 "REPLACE & SEARCH "Insert replace text AND /"
 nnoremap <C-g> :%s//g<left><left>
-"VIM tehemei
-"packadd! dracula
-" Wayland Clipboard Support
-xnoremap "+y y:call system("wl-copy", @")<cr>  
-nnoremap "+p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p  
-nnoremap "*p :let @"=substitute(system("wl-paste --no-newline --primary"), '<C-v><C-m>', '', 'g')<cr>p 
-set paste
