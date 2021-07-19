@@ -5,9 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+alias ls='exa'
 alias ..='cd ..'
-alias ll='exa'
+alias ll='exa -l'
 alias la='lsd -a'
 alias cp='cp -iv'
 alias rm='rm -I'
@@ -28,8 +28,8 @@ export HISTFILESIZE=10000
 export TUIR_EDITOR=vim
 export BROWSER=firefox
 #Colors
-#RED='\033[0;31m'
-#BLUE='\033[0;34m'
-#YELLOW='\033[0;93m'
-#MAGENTA='\033[0;95m'
-#GREEN='\033[0;92m'
+RED='\033[0;31m'
+BLUE='\033[0;34m'
+YELLOW='\033[0;93m'
+MAGENTA='\033[0;95m'
+GREEN='\033[0;92m'
