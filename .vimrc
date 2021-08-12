@@ -140,14 +140,6 @@ colorscheme darkblue
 set viminfo='20,<1000,s1000
 set number 
 set noshowmode
-"call plug#begin()
-"Plug 'ap/vim-css-color'
-"Plug 'dracula/vim', { 'as': 'dracula' }
-"call plug#end()
-"let g:lightline = {
-"	\ 'colorscheme': 'wombat',
-"	\ }
-"fix "visual" when transparent term. Visual dont exist vim/ex from "1970"
 highlight clear CursorLine to clear the current cusorline hl
 highlight CursorLine gui=underline cterm=underline 
 highlight Visual cterm=bold,underline ctermbg=Black ctermfg=NONE
@@ -155,3 +147,9 @@ highlight Visual cterm=bold,underline ctermbg=Black ctermfg=NONE
 set scrolloff=999
 "REPLACE & SEARCH "Insert replace text AND /"
 nnoremap <C-g> :%s//g<left><left>
+"Make vim behave like good boy
+nnoremap Y y$
+"Keep searches centered
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ´z
