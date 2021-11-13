@@ -1,0 +1,3 @@
+#!/bin/bash
+read -p "Enter Text>"
+w3m https://duckduckgo.com/?q="$REPLY"
