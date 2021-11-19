@@ -11,6 +11,10 @@ fzf_key_binding is for binding fzf search command hist.
 rc.conf is for ranger.
 style.css for waybar (sway-wm)
 theme.lua and rc.lua for AwesomeWM.
+duck shell script that searches duckaduckgo with w3m.
+two different sway configs for laptop/desktop.
+parfd script that fuzzy finds on aur.
+sp spotify control via dbus.
 ```
 
-Rest is deprecated, since "better" sotware is on its way.
+Rest is deprecated, if other software has replaced it.
