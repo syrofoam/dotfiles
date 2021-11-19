@@ -5,7 +5,7 @@ You can check out and find insperation if you want.
 
 ```
 autostart is for dwm top bar
-kitty.conf is for kitty terminal
+kitty.conf is for kitty terminal(foot.ini now)
 fish_prompt.fish is just a bash.rc for fish shell.
 fzf_key_binding is for binding fzf search command hist.
 rc.conf is for ranger.
