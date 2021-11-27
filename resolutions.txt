@@ -1,20 +1,20 @@
 
 Resolution 	Pixels
 
-540p / qHD 	960×540 pixels
+540p / qHD 	960x540 pixels
 
-720p / HD 	1280×720 pixels
+720p / HD 	1280x720 pixels
 
-1080p / Full HD / FHD 	19201080 pixels
+1080p / Full HD / FHD 	1920x1080 pixels
 
-2K 	2048×1080 pixels
+2K 	2048x1080 pixels
 
-1440p / QHD / QuadHD / WQHD 	2560×1440 pixels
+1440p / QHD / QuadHD / WQHD 	2560x1440 pixels
 
-2160p / UHD 	3840×2160 pixels
+2160p / UHD 	3840x2160 pixels
 
-4K 	4096×2160 pixels
+4K 	4096x2160 pixels
 
-5K 	5120×2880 pixels
+5K 	5120x2880 pixels
 
-8K / 8K UHD 	7680×4320 pixels
+8K / 8K UHD 	7680x4320 pixels
