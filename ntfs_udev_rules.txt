@@ -1,0 +1,9 @@
+
+
+You need to add a udev rule
+
+    Create/edit /etc/udev/rules.d/ntfs.rules
+
+    Add the following line: SUBSYSTEM=="block", ENV{ID_FS_TYPE}=="ntfs", ENV{ID_FS_TYPE}="ntfs3"
+    // ntfs3g driver implemented into 5.15+ kernels
+    Run udevadm control --reload-rules or reboot and it shout work automatically from now on
