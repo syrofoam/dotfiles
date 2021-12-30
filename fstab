@@ -1,0 +1,27 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/nvme0n1p2
+UUID=932d91d1-cf70-4975-84a2-f315e3c3fe3b	/         	btrfs     	rw,noatime,compress=lzo,ssd,space_cache=v2,subvolid=256,subvol=/@,subvol=@	0 0
+
+# /dev/nvme0n1p1
+UUID=D5A7-1161      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /dev/nvme0n1p2
+UUID=932d91d1-cf70-4975-84a2-f315e3c3fe3b	/home     	btrfs     	rw,noatime,compress=lzo,ssd,space_cache=v2,subvolid=257,subvol=/@home,subvol=@home	0 0
+
+# /dev/nvme0n1p2
+UUID=932d91d1-cf70-4975-84a2-f315e3c3fe3b	/.snapshots	btrfs     	rw,noatime,compress=lzo,ssd,space_cache=v2,subvolid=258,subvol=/@snapshots,subvol=@snapshots	0 0
+
+# /dev/nvme0n1p2
+UUID=932d91d1-cf70-4975-84a2-f315e3c3fe3b	/var_log  	btrfs     	rw,noatime,compress=lzo,ssd,space_cache=v2,subvolid=259,subvol=/@var_log,subvol=@var_log	0 0
+
+# /dev/nvme0n1p3
+UUID=37c92ea0-73d2-4f3d-bf3e-f3d53c6215a1	none      	swap      	defaults  	0 0
+
+UUID=b1a16dcc-1da5-4186-9ccc-9d2c5bb19e1b	/mnt/disk	btrfs		rw,noatime,compress=lzo,subvolid=256,subvol=/lager,subvol=lager		0 0
+
+UUID=BE8F-3AAA					/mnt/boot	vfat		ro		0 0
+
+UUID=3E085C4A085BFEF9				/mnt/win	ntfs3		rw,user		0 0
