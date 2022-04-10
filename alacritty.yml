@@ -442,10 +442,9 @@ key_bindings:
   - { key: Insert,   mods: Shift,         action: Paste            }
   - { key: Slash,    mods: Control,       chars: "gc"              }
   - { key: Y,        mods: Control,       action: Copy             }
-  - { key: Key8,     mods: Control,       action: ResetFontSize    }
-  - { key: Equals,   mods: Control,       action: IncreaseFontSize }
-  - { key: Key0,     mods: Control,       action: IncreaseFontSize }
-  - { key: Key9,    mods: Control,       action: DecreaseFontSize }
+  - { key: Key0,     mods: Control,       action: ResetFontSize    }
+  - { key: Key9,     mods: Control,       action: IncreaseFontSize }
+  - { key: Key8,     mods: Control,       action: DecreaseFontSize }
   # Vi Mode
   - { key: Space,  mods: Control,       mode: Vi, action: ScrollToBottom          }
   - { key: Space,  mods: Control,                 action: ToggleViMode            }
