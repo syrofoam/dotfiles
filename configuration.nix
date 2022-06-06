@@ -105,6 +105,10 @@
     ripgrep
     lutris
     steam
+    htop
+    lm_sensors
+    youtube-dl
+    fwupd
     element-desktop 
   ];
 
