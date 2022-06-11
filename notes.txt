@@ -1,0 +1,47 @@
+Emerge an unstalbe package. emerge --ask --autounmask=y --autounmask-write games-kids/gcompris
+
+set use flags for packages. /etc/portage/package.use/package.use
+
+emerge -aDNuv @world | short version of update
+
+
+Add repositories
+
+Syntax: add <name> <sync-type> <sync-uri>
+root #eselect repository add test git https://github.com/test/test.git
+Disable repositories without removing contents
+
+Syntax: disable [-f] (<name>|<index>)...
+root #eselect repository disable foo bar
+
+The -f option is required for repositories not registered with repos.gentoo.org, and those without sync attributes. Use with care.
+Disable repositories and remove contents
+
+Syntax: remove [-f] (<name>|<index>)...
+root #eselect repository remove bar baz
+
+The -f option is required for repositories not registered with repos.gentoo.org, and those without sync attributes. Use with care. 
+
+ You can also see what depends on a package using equery d <foo>.
+
+DXVK_FRAME_RATE=144 %command%
+DXVK_ASYNC=1 asyncronus shader compiling for those interested.
+MANGOHUD=1 %command%
+
+ genr8eofl_ | +pipewire-alsa use flag  
+
+Finding file on github. filename:my_filename.txt
+
+filename:userChrome.css
+upower -i /org/freedesktop/UPower/devices/gaming_input_ps_controller_battery_7co66oefo51o93o22
+cat "/sys/class/power_supply/ps-controller-battery-7c:66:ef:51:93:22/capacity" 
+
+Run a desktop inside the desktop
+dbus-run-session sway
+
+##RADV
+RADV_PERFTEST=nggc //Enabling NGG culling on Navi graphics cards
+RADV_PERFTEST=aco %command%
+
+##Proton
+"PROTON_USE_WINED3D=1 %command%" to use the OpenGL-based wined3d renderer instead of the Vulkan-based DXVK renderer.
