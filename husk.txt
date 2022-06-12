@@ -10,6 +10,7 @@ sudo virsh net-start default
 
 radeontop tool. Select bus device 3 for RTX6800
 
+##Chose between the "Pro" driver or the MESA driver (RADV)"
 AMD_VULKAN_ICD=AMDVLK
 AMD_VULKAN_ICD=RADV
 
