@@ -41,9 +41,9 @@ dbus-run-session sway
 
 ##RADV
 RADV_PERFTEST=nggc //Enabling NGG culling on Navi graphics cards
-RADV_PERFTEST=aco %command% //ACO Compiler is on by default
-RADV_PERFTEST=rt //raytracing
-RADV_PERFTEST=llvm %command% //enable llvm compiler instead of ACO
+RADV_PERFTEST=aco %command%
+RADV_PERFTEST=sam
+RADV_PERFTEST=nggc
 
 ##Proton
 "PROTON_USE_WINED3D=1 %command%" to use the OpenGL-based wined3d renderer instead of the Vulkan-based DXVK renderer.
@@ -51,8 +51,3 @@ RADV_PERFTEST=llvm %command% //enable llvm compiler instead of ACO
 #DXVK hacks
 DXVK_ASYNC=1 gamemoderun %command% //Paralellism on shader stuff
 DXVK_FRAME_RATE=144
-
-#FSR HACK
-WINE_FULLSCREEN_FSR=1
-
-
