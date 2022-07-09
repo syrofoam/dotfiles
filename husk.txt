@@ -46,3 +46,6 @@ nix-env --uninstall pulsemixer
 
 sudo sysctl -w vm.max_map_count=16777216
 To moutch geomotry ingame have to increase buffer.
+
+taskset -c 0,1,2,3,4 nice %command%
+PROTON_USE_WINED3D=1 %command%
