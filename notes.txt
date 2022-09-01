@@ -51,3 +51,17 @@ RADV_PERFTEST=nggc
 #DXVK hacks
 DXVK_ASYNC=1 gamemoderun %command% //Paralellism on shader stuff
 DXVK_FRAME_RATE=144
+
+You may use natural language to filter the logs. Terms like yesterday, today and tomorrow are recognized.
+
+journalctl --since=yesterday --until=now
+
+You can also specify date or date time combination:
+
+journalctl --since "2020-07-10"
+
+You can also specify a time period with the dates and time:
+
+journalctl --since "2020-07-10 15:10:00" --until "2020-07-12"
+
+set -Ux _microarchitecture 15

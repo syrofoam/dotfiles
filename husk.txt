@@ -48,4 +48,6 @@ sudo sysctl -w vm.max_map_count=16777216
 To moutch geomotry ingame have to increase buffer.
 
 taskset -c 0,1,2,3,4 nice %command%
-PROTON_USE_WINED3D=1 %command%
+PROTON_USE_WINED3D=1 %command% #force opengl
+PROTON_NO_ESYNC=1 fix crashing games.
+https://web.libera.chat/#blastwave
