@@ -18,7 +18,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "phobos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -79,28 +79,20 @@
     description = "stian";
     extraGroups = [ "networkmanager" "wheel" "udev" "video" ];
     packages = with pkgs; [
-      waybar
       firefox
       kate
-      sway
       alacritty
-      wayland
-      glib
       swaylock
       swayidle
       grim
       slurp
+      corectrl
       wl-clipboard
       mako
-      vim
       pulsemixer
-      fd
-      ripgrep
-      neofetch
       pcmanfm
       weechat
       mangohud
-      bat
       fzf
       flatpak
       pwgen
@@ -126,14 +118,10 @@
       cpupower-gui
       nomacs
       rofi-wayland
-      htop
       flameshot
       autotiling
-      brightnessctl
-      corectrl
       git
       foot
-      tlp
     ];
   };
 
@@ -143,8 +131,21 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    ripgrep
+    neofetch
+    fd
+    colordiff
+    exa
+    waybar
+    wayland
+    htop
+    tlp
+    sway
+    brightnessctl
+    bat
+    glib
+    vim
+    wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -167,6 +168,8 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  #sway configuration 
   programs.sway = {
     enable = true;
   };
@@ -177,7 +180,7 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
     gtkUsePortal = true;
   };
-    ##L O L powerManagement.cpuFreqGovernor = ondemand;
+    ##tlp is a powerfull tool. Set battery charge and perf only missing gpustuff;
 
     services.tlp = {
     enable = true;
@@ -198,6 +201,14 @@
       CPU_MAX_PERF_ON_BAT=60;
     };
   };
+  # Enable zramswap
+  zramSwap = {
+    enable = true;
+    algorithm = "zstd";
+  };
+  #check that services.zram-init-zram0.enable = true;
+  #it crated 7.5gb swap :) and check with swapon -s 7888448kb
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
