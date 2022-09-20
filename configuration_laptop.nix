@@ -93,7 +93,6 @@
       pcmanfm
       weechat
       mangohud
-      fzf
       flatpak
       pwgen
       retroarchFull
@@ -116,6 +115,7 @@
       unzip
       nerdfonts
       cpupower-gui
+      mupdf
       nomacs
       rofi-wayland
       flameshot
@@ -133,7 +133,9 @@
   environment.systemPackages = with pkgs; [
     nerdfonts
     ripgrep
+    bash-completion
     neofetch
+    fzf
     fd
     colordiff
     exa
@@ -162,8 +164,10 @@
 
   # Enable the OpenSSH daemon.
   # Enable flatpak
+  # Enable fwupd
   services.openssh.enable = true;
   services.flatpak.enable = true;
+  services.fwupd.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -171,13 +175,15 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  #sway configuration 
+  #Program options?
   programs.sway = {
     enable = true;
   };
   programs.corectrl = {
     enable = true;
   };
+
+  #sway configuration
 services.dbus.enable = true;
   xdg.portal = {
     enable = true;
@@ -197,12 +203,12 @@ services.dbus.enable = true;
       # preserve lifetime. Run `tlp fullcharge` to temporarily force
       # full charge.
       # https://linrunner.de/tlp/faq/battery.html#how-to-choose-good-battery-charge-thresholds
-      START_CHARGE_THRESH_BAT0=40;
-      STOP_CHARGE_THRESH_BAT0=50;
+      START_CHARGE_THRESH_BAT0=70;
+      STOP_CHARGE_THRESH_BAT0=80;
 
       # 100 being the maximum, limit the speed of my CPU to reduce
       # heat and increase battery usage:
-      CPU_MAX_PERF_ON_AC=75;
+      CPU_MAX_PERF_ON_AC=70;
       CPU_MAX_PERF_ON_BAT=60;
     };
   };
