@@ -13,7 +13,6 @@
 
   # Bootloader.
   #boot.kernelParams = [ "amdgpu.ppfeaturemask=0xffffffff" ]; added in options.
-  boot.kernelModules = [ "acpi_cpufreq" ];
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
