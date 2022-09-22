@@ -50,4 +50,10 @@ To moutch geomotry ingame have to increase buffer.
 taskset -c 0,1,2,3,4 nice %command%
 PROTON_USE_WINED3D=1 %command% #force opengl
 PROTON_NO_ESYNC=1 fix crashing games.
-https://web.libera.chat/#blastwave
+
+
+/set irc.look.smart_filter "on"
+/server add libera irc.libera.chat/6697 -ssl
+/secure set libera xxxxxxx
+/set irc.server.libera.command "/msg nickserv identify ${sec.data.libera}"
+/toggle irc.server.libera.autojoin #chan
