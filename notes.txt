@@ -65,3 +65,6 @@ You can also specify a time period with the dates and time:
 journalctl --since "2020-07-10 15:10:00" --until "2020-07-12"
 
 set -Ux _microarchitecture 15
+
+stian@phobos ~ $ cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_driver 
+amd-pstate
