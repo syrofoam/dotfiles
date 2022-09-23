@@ -12,7 +12,8 @@
     ];
 
   # Bootloader.
-  #boot.kernelParams = [ "amdgpu.ppfeaturemask=0xffffffff" ]; added in options.
+  boot.kernelParams = [ "initcall_blacklist=acpi_cpufreq_init" ];
+  boot.kernelPackages = pkgs.linuxPackages_xanmod;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
@@ -78,49 +79,8 @@
     description = "stian";
     extraGroups = [ "networkmanager" "wheel" "udev" "video" ];
     packages = with pkgs; [
-      firefox
-      kate
-      alacritty
-      swaylock
-      swayidle
-      grim
-      slurp
-      corectrl
-      wl-clipboard
-      mako
-      pulsemixer
-      pcmanfm
-      weechat
-      mangohud
-      flatpak
-      pwgen
-      retroarchFull
-      krita
-      youtube-dl
-      ranger
-      qbittorrent
-      vulkan-tools
-      sshfs
-      btop
-      ncdu
-      mpv
-      gparted
-      lutris
-      terminus_font
-      geany
-      heroic
-      filezilla
-      unrar
-      unzip
-      nerdfonts
-      cpupower-gui
-      mupdf
-      nomacs
-      rofi-wayland
-      flameshot
-      autotiling
-      git
-      foot
+    autotiling
+    terminus_font
     ];
   };
 
@@ -131,6 +91,48 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     nerdfonts
+    firefox
+    kate
+    alacritty
+    swaylock
+    swayidle
+    grim
+    slurp
+    corectrl
+    wl-clipboard
+    mako
+    pulsemixer
+    pcmanfm
+    weechat
+    mangohud
+    flatpak
+    pwgen
+    retroarchFull
+    krita
+    youtube-dl
+    ranger
+    qbittorrent
+    vulkan-tools
+    sshfs
+    btop
+    libappindicator
+    ncdu
+    mpv
+    gparted
+    lutris
+    geany
+    heroic
+    filezilla
+    unrar
+    unzip
+    nerdfonts
+    cpupower-gui
+    mupdf
+    nomacs
+    rofi-wayland
+    flameshot
+    git
+    foot
     ripgrep
     bash-completion
     neofetch
@@ -189,8 +191,8 @@ services.dbus.enable = true;
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-    gtkUsePortal = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-wlr ];
+    gtkUsePortal = false;
   };
     ##tlp is a powerfull tool. Set battery charge and perf only missing gpustuff;
 
@@ -198,7 +200,7 @@ services.dbus.enable = true;
     enable = true;
     settings = {
       CPU_SCALING_GOVERNOR_ON_BAT="powersave";
-      CPU_SCALING_GOVERNOR_ON_AC="ondemand";
+      CPU_SCALING_GOVERNOR_ON_AC="schedutil";
 
       # The following prevents the battery from charging fully to
       # preserve lifetime. Run `tlp fullcharge` to temporarily force
