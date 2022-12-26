@@ -68,3 +68,19 @@ set -Ux _microarchitecture 15
 
 stian@phobos ~ $ cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_driver 
 amd-pstate
+
+MESA_VK_DEVICE_SELECT=list vkcube
+ vulkaninfo
+ Gpu 0
+ Gpu 1 etc.
+
+Turn of cpu boost
+echo 0 > /sys/devices/system/cpu/cpufreq/boost
+
+Set variables that systemd uses: .config/environment.d/envvars.conf
+
+Check if xwayland or wayland
+tian@phobos ~ $ nix-shell -p xorg.xlsclients
+[nix-shell:~]$ xlsclients 
+phobos  Discord
+phobos  steam
