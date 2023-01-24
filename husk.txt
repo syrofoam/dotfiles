@@ -44,6 +44,14 @@ search packages 'nix-env -qa corectrl'
 nix-env --install pulsemixer #user install
 nix-env --uninstall pulsemixer
 
+sudo nix-channel --list
+
+nixos https://nixos.org/channels/nixos-22.05
+
+sudo nix-channel --add https://nixos.org/channels/nixos-22.11 nixos
+
+nixos-rebuild switch --upgrade
+
 sudo sysctl -w vm.max_map_count=16777216
 To moutch geomotry ingame have to increase buffer.
 
