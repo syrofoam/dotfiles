@@ -12,18 +12,20 @@ alias ll='exa -l'
 alias cp='cp -iv'
 alias rm='rm -I'
 alias mv='mv -i'
+alias p="ps aux | grep "
+
 if [[ ${EUID} == 0 ]] ; then
     PS1='\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
 else
-    PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
+    PS1='\[$(tput setaf 49)\]\u\[$(tput setaf 69)\]@\[$(tput setaf 202)\]\h \[$(tput setaf 91)\]\w \[$(tput sgr0)\]$ '
 fi
 
 #Saurce
 #source /usr/share/fzf/key-bindings.bash
 
 #Variables
-export HISTSIZE=10000
-export HISTFILESIZE=10000
+export HISTSIZE='10000'
+export HISTFILESIZE='10000'
 export EDITOR='vim'
 
 export LESS_TERMCAP_mb=$'\e[1;32m'
