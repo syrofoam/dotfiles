@@ -20,7 +20,6 @@ else
     PS1='\[$(tput setaf 49)\]\u\[$(tput setaf 69)\]@\[$(tput setaf 202)\]\h \[$(tput setaf 91)\]\w \[$(tput sgr0)\]$ '
 fi
 
-#Saurce
 #source /usr/share/fzf/key-bindings.bash
 
 #Variables
