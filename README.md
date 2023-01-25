@@ -17,4 +17,8 @@ parfd script that fuzzy finds on aur.
 sp spotify control via dbus.
 ```
 
-Rest is deprecated, if other software has replaced it.
+Updates Keeps it going!
+
+Fixed some not broken but dangerous/bad habbit 
+
+Most files should be self explanatory or short.
