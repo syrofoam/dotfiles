@@ -8,7 +8,7 @@
 alias ls='exa'
 alias ..='cd ..'
 alias ll='exa -l'
-alias la='lsd -a'
+#alias la='lsd -a'
 alias cp='cp -iv'
 alias rm='rm -I'
 alias mv='mv -i'
@@ -18,18 +18,18 @@ else
     PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
 fi
 
-#Sauce
-source /usr/share/fzf/key-bindings.bash
-source /usr/share/bash-completion/bash_completion
+#Saurce
+#source /usr/share/fzf/key-bindings.bash
 
 #Variables
 export HISTSIZE=10000
 export HISTFILESIZE=10000
-export TUIR_EDITOR=vim
-export BROWSER=firefox
-#Colors
-RED='\033[0;31m'
-BLUE='\033[0;34m'
-YELLOW='\033[0;93m'
-MAGENTA='\033[0;95m'
-GREEN='\033[0;92m'
+export EDITOR='vim'
+
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
