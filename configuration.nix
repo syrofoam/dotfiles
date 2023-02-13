@@ -88,6 +88,7 @@
     autotiling
     terminus_font
     tldr
+    tmux
     ];
   };
 
@@ -97,6 +98,17 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    haxor-news
+    perl
+    mangohud
+    radeontop
+    wmctrl
+    eww-wayland 
+    wofi
+    kitty
+    yuzu-mainline
+    dolphin-emu
+    man-pages
     firefox
     kate
     alacritty
@@ -237,5 +249,8 @@ services.dbus.enable = true;
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "22.10"; # Did you read the comment? Reading nix all day.
-  
+  nix.settings = {
+    substituters = ["https://hyprland.cachix.org"];
+    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+  };
 }
