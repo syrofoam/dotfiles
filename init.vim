@@ -32,8 +32,8 @@ map <F2> :set cursorline!<CR>
 map <F3> :set list!<CR>
 map <F4> :colorscheme<Space>
 noremap <silent> <F5> :NERDTreeToggle<CR>
-map <F7> :set spelllang=en_US<CR>
-map <F8> :set nospell<CR>
+map <F10> :set spelllang=en_US<CR>
+map <F11> :set nospell<CR>
 call plug#begin('~/.local/share/nvim/site/loaded/plug.vim')
 call plug#end()
 call plug#begin()
@@ -42,3 +42,12 @@ call plug#end()
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 call plug#end()
 colorscheme catppuccin
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+call plug#end()
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+call plug#end()
+map <F6> <cmd>Telescope find_files<cr>
+map <F7> <cmd>Telescope live_grep<cr>
+map <F8> <cmd>Telescope buffers<cr>
+map <F9> <cmd>Telescope help_tags<cr>
