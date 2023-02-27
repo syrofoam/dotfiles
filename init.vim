@@ -1,3 +1,4 @@
+set list
 set termguicolors        " enable 24-bit RGB colors
 set listchars=tab:→\ ,eol:↲,nbsp:␣,space:·,trail:·,extends:⟩,precedes:⟨
 set nocompatible            " disable compatibility to old-time vi
