@@ -1,17 +1,18 @@
-# **Here my dotfiles live.**
+# **Here my linux configurationfiles live.**
 ----
 *I belive the most of these files are personal ways of making the system customized.
 You can check out and find insperation if you want.
 
 ```
-autostart is for dwm top bar
-kitty.conf is for kitty terminal(foot.ini now)
-fish_prompt.fish is just a bash.rc for fish shell.
-fzf_key_binding is for binding fzf search command hist.
+autostart is for dwm top bar - not used for a while.
+kitty.conf is for kitty terminal - not used for a while.
+been using bash, but fish is nice.
+I'd argue that my bash takes some bash defaults and fixes them.
+updated tmux and migrated vim conf over to neovim.
 rc.conf is for ranger.
 style.css for waybar (sway-wm)
 theme.lua and rc.lua for AwesomeWM.
-duck shell script that searches duckaduckgo with w3m.
+Been testing hyperland a little.
 two different sway configs for laptop/desktop.
 parfd script that fuzzy finds on aur.
 sp spotify control via dbus.
@@ -19,6 +20,5 @@ sp spotify control via dbus.
 
 Updates Keeps it going!
 
-Fixed some not broken but dangerous/bad habbit 
-
 Most files should be self explanatory or short.
+
