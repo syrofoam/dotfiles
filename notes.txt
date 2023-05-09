@@ -74,6 +74,9 @@ MESA_VK_DEVICE_SELECT=list vkcube
  Gpu 0
  Gpu 1 etc.
 
+flatpaks cant read from home dir. override for config purpose.
+sudo flatpak override --filesystem=xdg-config/MangoHud:ro
+
 Turn of cpu boost
 echo 0 > /sys/devices/system/cpu/cpufreq/boost
 
@@ -84,3 +87,5 @@ tian@phobos ~ $ nix-shell -p xorg.xlsclients
 [nix-shell:~]$ xlsclients 
 phobos  Discord
 phobos  steam
+mangohud %command%
+powercfg -h off
