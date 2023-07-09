@@ -48,7 +48,7 @@ sudo nix-channel --list
 
 nixos https://nixos.org/channels/nixos-22.05
 
-sudo nix-channel --add https://nixos.org/channels/nixos-22.11 nixos
+sudo nix-channel --add https://nixos.org/channels/nixos-23.11 nixos
 
 nixos-rebuild switch --upgrade
 
