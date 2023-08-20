@@ -5,6 +5,12 @@
 { config, pkgs, ... }:
 
 {
+  nix = {
+    enable = true;
+    package = pkgs.nix;
+    settings.experimental-features = "nix-command flakes";
+  };
+
   imports =
     [ # Include the results of the hardware scan.
       #./cpupower.nix
@@ -12,8 +18,8 @@
     ];
 
   # Bootloader.
-  boot.kernelParams = [ "initcall_blacklist=acpi_cpufreq_init" ];
-  boot.kernelPackages = pkgs.linuxPackages_xanmod;
+  boot.kernelParams = [ "amd_pstate=passive" ];
+  boot.kernelPackages = pkgs.linuxPackages_xanmod_stable;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
@@ -36,11 +42,10 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
   # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
-
+  services.xserver.displayManager.sddm.enable = false;
+  services.xserver.desktopManager.plasma5.enable = false;
+  services.xserver.displayManager.gdm.enable = true;
   # Configure keymap in X11
   services.xserver = {
     layout = "no";
@@ -81,6 +86,8 @@
     packages = with pkgs; [
     autotiling
     terminus_font
+    tldr
+    tmux
     ];
   };
 
@@ -90,7 +97,25 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    nerdfonts
+    lm_sensors
+    streamlink
+    bat-extras.batman
+    easyeffects
+    killall
+    wineWowPackages.waylandFull
+    dua
+    w3m-nox
+    qmmp
+    perl
+    mangohud
+    radeontop
+    wmctrl
+    eww-wayland 
+    wofi
+    kitty
+    yuzu-mainline
+    dolphin-emu
+    man-pages
     firefox
     kate
     alacritty
@@ -100,20 +125,21 @@
     slurp
     corectrl
     wl-clipboard
-    mako
+    qtile
     pulsemixer
     pcmanfm
     weechat
     mangohud
     flatpak
     pwgen
-    retroarchFull
     krita
     youtube-dl
     ranger
     qbittorrent
     vulkan-tools
     sshfs
+    tig
+    tree
     btop
     libappindicator
     ncdu
@@ -121,11 +147,11 @@
     gparted
     lutris
     geany
-    heroic
     filezilla
     unrar
     unzip
-    nerdfonts
+    neovim
+    nodejs
     cpupower-gui
     mupdf
     nomacs
@@ -182,10 +208,13 @@
   programs.sway = {
     enable = true;
   };
+  programs.kdeconnect = {
+    enable = true;
+  };
   programs.corectrl = {
     enable = true;
   };
-
+  services.xserver.windowManager.qtile.enable = true;
   #sway configuration
 services.dbus.enable = true;
   xdg.portal = {
@@ -196,25 +225,25 @@ services.dbus.enable = true;
   };
     ##tlp is a powerfull tool. Set battery charge and perf only missing gpustuff;
 
-    services.tlp = {
-    enable = true;
-    settings = {
-      CPU_SCALING_GOVERNOR_ON_BAT="powersave";
-      CPU_SCALING_GOVERNOR_ON_AC="schedutil";
+#    services.tlp = {
+#    enable = true;
+#    settings = {
+#      CPU_SCALING_GOVERNOR_ON_BAT="powersave";
+#      CPU_SCALING_GOVERNOR_ON_AC="schedutil";
 
       # The following prevents the battery from charging fully to
       # preserve lifetime. Run `tlp fullcharge` to temporarily force
       # full charge.
       # https://linrunner.de/tlp/faq/battery.html#how-to-choose-good-battery-charge-thresholds
-      START_CHARGE_THRESH_BAT0=70;
-      STOP_CHARGE_THRESH_BAT0=80;
+#      START_CHARGE_THRESH_BAT0=75;
+#      STOP_CHARGE_THRESH_BAT0=80;
 
       # 100 being the maximum, limit the speed of my CPU to reduce
       # heat and increase battery usage:
-      CPU_MAX_PERF_ON_AC=70;
-      CPU_MAX_PERF_ON_BAT=60;
-    };
-  };
+#      CPU_MAX_PERF_ON_AC=65;
+#      CPU_MAX_PERF_ON_BAT=50;
+#    };
+#  };
   # Enable zramswap
   zramSwap = {
     enable = true;
@@ -229,6 +258,5 @@ services.dbus.enable = true;
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "22.05"; # Did you read the comment? Reading nix all day.
-  
+  system.stateVersion = "23.05"; # Did you read the comment? Reading nix all day.
 }
