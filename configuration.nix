@@ -8,7 +8,6 @@
   nix = {
     enable = true;
     package = pkgs.nix;
-    settings.experimental-features = "nix-command flakes";
   };
 
   imports =
@@ -18,8 +17,8 @@
     ];
 
   # Bootloader.
-  #boot.kernelParams = [ "initcall_blacklist=acpi_cpufreq_init" ];
-  boot.kernelPackages = pkgs.linuxPackages_xanmod;
+  boot.kernelParams = [ "amd_pstate=passive" ];
+  boot.kernelPackages = pkgs.linuxPackages_xanmod_stable;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
@@ -42,11 +41,11 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
-
+  services.xserver.displayManager.defaultSession = "plasmawayland";
+  #services.xserver.displayManager.gdm.enable = true;
   # Configure keymap in X11
   services.xserver = {
     layout = "no";
@@ -58,10 +57,11 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
+  services.supergfxd.enable = true;
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
+  virtualisation.waydroid.enable = true;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -78,7 +78,6 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.stian = {
     isNormalUser = true;
@@ -87,7 +86,9 @@
     packages = with pkgs; [
     autotiling
     terminus_font
+    steam
     tldr
+    realvnc-vnc-viewer
     tmux
     ];
   };
@@ -98,7 +99,23 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    haxor-news
+    retroarch
+    lm_sensors
+    streamlink
+    bat-extras.batman
+    wayfire
+    wf-config
+    wayfire-with-plugins
+    wayfirePlugins.wcm
+    wayfirePlugins.wf-shell
+    wayfirePlugins.wayfire-plugins-extra
+    easyeffects
+    killall
+    wineWowPackages.waylandFull
+    lite-xl
+    dua
+    w3m-nox
+    qmmp
     perl
     mangohud
     radeontop
@@ -118,14 +135,13 @@
     slurp
     corectrl
     wl-clipboard
-    mako
+    qtile
     pulsemixer
     pcmanfm
     weechat
     mangohud
     flatpak
     pwgen
-    retroarchFull
     krita
     youtube-dl
     ranger
@@ -144,7 +160,8 @@
     filezilla
     unrar
     unzip
-    nerdfonts
+    neovim
+    nodejs
     cpupower-gui
     mupdf
     nomacs
@@ -158,7 +175,6 @@
     fzf
     fd
     colordiff
-    exa
     waybar
     wayland
     htop
@@ -201,10 +217,12 @@
   programs.sway = {
     enable = true;
   };
+  programs.kdeconnect = {
+    enable = true;
+  };
   programs.corectrl = {
     enable = true;
   };
-
   #sway configuration
 services.dbus.enable = true;
   xdg.portal = {
@@ -214,6 +232,7 @@ services.dbus.enable = true;
     gtkUsePortal = false;
   };
     ##tlp is a powerfull tool. Set battery charge and perf only missing gpustuff;
+
 
 #    services.tlp = {
 #    enable = true;
@@ -239,6 +258,7 @@ services.dbus.enable = true;
     enable = true;
     algorithm = "zstd";
   };
+  #
   #check that services.zram-init-zram0.enable = true;
   #it crated 7.5gb swap :) and check with swapon -s 7888448kb
 
@@ -248,9 +268,5 @@ services.dbus.enable = true;
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "22.10"; # Did you read the comment? Reading nix all day.
-  nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
-  };
+  system.stateVersion = "23.11"; # Did you read the comment? Reading nix all day.
 }
