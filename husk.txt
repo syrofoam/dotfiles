@@ -1,5 +1,7 @@
 !!!HUSK
 
+MOZ_ENABLE_WAYLAND=1 firefox
+streamlink www.twitch.tv/kotton best --player mpv
 apropos = søke hilken manual
 set -x PAGER /usr/bin/moar = fish sette manual til moar
 set -x MOAR --statusbar=bold --no-linenumbers
