@@ -217,6 +217,9 @@
   programs.sway = {
     enable = true;
   };
+  programs.wayfire = {
+    enable = true;
+  };
   programs.kdeconnect = {
     enable = true;
   };
