@@ -32,7 +32,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
+  networking.hosts = {"80.232.93.176" = ["192.168.1.2"];};
   # Set your time zone.
   time.timeZone = "Europe/Oslo";
 
@@ -56,12 +56,12 @@
   console.keyMap = "no";
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
-  services.supergfxd.enable = true;
+  services.printing.enable = false;
+  services.supergfxd.enable = false;
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
-  virtualisation.waydroid.enable = true;
+  #virtualisation.waydroid.enable = true;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -99,6 +99,12 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    rocmPackages.rocm-smi
+    cmake
+    go
+    eza
+    light
+    lsd
     retroarch
     lm_sensors
     streamlink
@@ -123,7 +129,6 @@
     eww-wayland 
     wofi
     kitty
-    yuzu-mainline
     dolphin-emu
     man-pages
     firefox
