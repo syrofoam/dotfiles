@@ -85,11 +85,14 @@
     extraGroups = [ "networkmanager" "wheel" "udev" "video" ];
     packages = with pkgs; [
     autotiling
+    amdgpu_top
+    libva-utils
     terminus_font
     steam
     tldr
     realvnc-vnc-viewer
     tmux
+    ttop
     ];
   };
 
@@ -104,6 +107,7 @@
     go
     eza
     light
+    adb
     lsd
     retroarch
     lm_sensors
@@ -131,7 +135,6 @@
     kitty
     dolphin-emu
     man-pages
-    firefox
     kate
     alacritty
     swaylock
@@ -226,6 +229,9 @@
     enable = true;
   };
   programs.kdeconnect = {
+    enable = true;
+  };
+  programs.hyprland = {
     enable = true;
   };
   programs.corectrl = {
