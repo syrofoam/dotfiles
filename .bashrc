@@ -4,11 +4,8 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-
-alias ls='exa'
+alias ls='ls --color=auto'
 alias ..='cd ..'
-alias ll='exa -l'
-#alias la='lsd -a'
 alias cp='cp -ivr' #recursive interactive verbose
 alias rm='rm -I'
 alias mv='mv -i'
@@ -34,3 +31,4 @@ export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
+source key-bindings.bash
