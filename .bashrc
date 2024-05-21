@@ -1,12 +1,18 @@
-#
-# ~/.bashrc
-#
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+#end fedora
+
 alias ls='ls --color=auto'
+alias l='ls -lrt'
+alias ll='eza -lr -snew'
 alias ..='cd ..'
-alias cp='cp -ivr' #recursive interactive verbose
+alias cp='cp -ivr'
 alias rm='rm -I'
 alias mv='mv -i'
 alias p="ps aux | grep "
@@ -14,7 +20,7 @@ alias p="ps aux | grep "
 if [[ ${EUID} == 0 ]] ; then
     PS1='\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
 else
-    PS1='\[$(tput setaf 49)\]\u\[$(tput setaf 69)\]@\[$(tput setaf 202)\]\h \[$(tput setaf 91)\]\w \[$(tput sgr0)\]$ '
+    PS1='\[$(tput setaf 49)\]\u\[$(tput setaf 69)\]@\[$(tput setaf 202)\]\h \[$(tput setaf 91)\]\w   \[$(tput sgr0)\]$ '
 fi
 
 #source /usr/share/fzf/key-bindings.bash
@@ -31,4 +37,4 @@ export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
-source key-bindings.bash
+source $HOME/.config/key-bindings.bash
