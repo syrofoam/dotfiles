@@ -18,7 +18,9 @@ parfd script that fuzzy finds on aur.
 sp spotify control via dbus.
 ```
 
-Updates Keeps it going!
+Arch, Gentoo, nixos config files.
+
+Now on bazzite and there I have arch + alpine etc.
 
 Most files should be self explanatory or short.
 
