@@ -164,9 +164,9 @@ backend = "Vulkan"
 #target-fps = "0"
 strategy = "Continuous"
 level = 1
-filters = [
-  "/home/stian/git/slang-shaders/crt/newpixie-crt.slangp"
-]
+#filters = [
+#  "/home/stian/git/slang-shaders/crt/newpixie-crt.slangp"
+#]
 
 # Keyboard
 #
@@ -308,17 +308,38 @@ filters = [
 # (considering if theme folder does exists and is being used)
 #
 # Example:
-# [colors]
-# background = '#0F0D0E'
-# foreground = '#F9F4DA'
-# cursor = '#F38BA3'
-# tabs = '#443d40'
-# tabs-active = '#F38BA3'
-# green = '#0BA95B'
-# red = '#ED203D'
-# blue = '#12B5E5'
-# yellow = '#FCBA28'
-
+[colors]
+background       = '#282A36'
+black            = '#44475A'
+blue             = '#BD93F9'
+cursor           = '#F8F8F2'
+cyan             = '#8BE9FD'
+foreground       = '#F8F8F2'
+green            = '#50fa7b'
+magenta          = '#FF79C6'
+red              = '#FF5555'
+tabs             = '#494c62'
+tabs-active      = '#6a6e8e'
+white            = '#F8F8F2'
+yellow           = '#F1FA8C'
+dim-black        = '#393C4b'
+dim-blue         = '#AE7BF8'
+dim-cyan         = '#69C3dE'
+dim-foreground   = '#dfdfd9'
+dim-green        = '#06572F'
+dim-magenta      = '#FF60BB'
+dim-red          = '#FF3C3C'
+dim-white        = '#EFEFE1'
+dim-yellow       = '#E6A003'
+light-black      = '#6272A4'
+light-blue       = '#D6ACFF'
+light-cyan       = '#A4FFFF'
+light-foreground = '#f8f8f1'
+light-green      = '#69FF94'
+light-magenta    = '#FF92DF'
+light-red        = '#FF6E6E'
+light-white      = '#FFFFFF'
+light-yellow     = '#FFFFA5'
 # Bindings
 #
 # Create custom Key bindings for Rio terminal
