@@ -16,11 +16,14 @@ Been testing hyperland a little.
 two different sway configs for laptop/desktop.
 parfd script that fuzzy finds on aur.
 sp spotify control via dbus.
+moved configurations into directory's. Terminals
 ```
 
 Arch, Gentoo, nixos config files.
 
-Now on bazzite and there I have arch + alpine etc.
+Now on bazzite and a duble catchyos setup.
 
 Most files should be self explanatory or short.
+
+Configuration files over 2-300 lines is kinda excessive.
 
