@@ -157,15 +157,15 @@ confirm-before-quit = false
 # • filters: A list of paths to RetroArch slang shaders. Might not work with OpenGL.
 #
 # Example:
-# [renderer]
+[renderer]
 # disable-unfocused-render = false
 performance = "high"
 backend = "Vulkan"
-target-fps = "120"
+#target-fps = "0"
 strategy = "Continuous"
 level = 1
 filters = [
-           "/home/deck/.config/rio/shader_slang/crt/newpixie-crt.slangp"
+  "/home/stian/git/slang-shaders/crt/newpixie-crt.slangp"
 ]
 
 # Keyboard
