@@ -135,7 +135,7 @@ let g:netrw_winsize = 25
 "    augroup END
 set backspace=indent,eol,start
 "colorscheme default
-colorscheme darkblue
+colorscheme habamax
 "prevents truncuated yanks deletes, etc.
 set viminfo='20,<1000,s1000
 set number 
