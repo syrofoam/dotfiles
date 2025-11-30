@@ -23,8 +23,18 @@
     "modules-right": [
         "tray",
         "pulseaudio",
+	"network",
         "clock",
-        "battery",
+	"battery",
         "custom/exit"
-    ]
+    ],
+// Add this module definition at the bottom of your config
+    "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": " {ipaddr}",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "⚠ Disconnected",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "tooltip-format": "{ifname} via {gwaddr}"
+    }
 }
