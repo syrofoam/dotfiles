@@ -14,7 +14,8 @@ input {
 
     touchpad {
         tap // Enable tap-to-click
-        //natural-scroll // Enable natural (macOS-style) scrolling
+        accel-profile "flat"
+	//natural-scroll // Enable natural (macOS-style) scrolling
     }
 
     focus-follows-mouse // Automatically focus windows under the mouse pointer
@@ -38,13 +39,13 @@ binds {
     MOD+SHIFT+ESCAPE                     { show-hotkey-overlay; }
 
     // ─── Applications ───
-    MOD+RETURN                          hotkey-overlay-title="Open Terminal: alacritty" { spawn-sh "alacritty"; }
-    MOD+SPACE                           hotkey-overlay-title="Open App Launcher: wofi" { spawn-sh "wofi"; }
+    MOD+RETURN                          hotkey-overlay-title="Open Terminal: konsole" { spawn-sh "konsole"; }
+    MOD+R                           hotkey-overlay-title="Open App Launcher: wofi" { spawn-sh "wofi"; }
     MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn-sh "firefox"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
     
     // Please choose your own file manager
-    MOD+E                             hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "nautilus"; }
+    MOD+E                             hotkey-overlay-title="File Manager: Dolphin" { spawn-sh "dolphin"; }
     // ___ Brightness Control ___
     XF86MonBrightnessUp                  allow-when-locked=true { spawn-sh "brightnessctl set +10%"; }
     XF86MonBrightnessDown                allow-when-locked=true { spawn-sh "brightnessctl set 10%-"; }
@@ -123,15 +124,15 @@ binds {
     MOD+8                               { focus-workspace 8; }
     MOD+9                               { focus-workspace 9; }
 
-    MOD+CTRL+1                          { move-column-to-workspace 1; }
-    MOD+CTRL+2                          { move-column-to-workspace 2; }
-    MOD+CTRL+3                          { move-column-to-workspace 3; }
-    MOD+CTRL+4                          { move-column-to-workspace 4; }
-    MOD+CTRL+5                          { move-column-to-workspace 5; }
-    MOD+CTRL+6                          { move-column-to-workspace 6; }
-    MOD+CTRL+7                          { move-column-to-workspace 7; }
-    MOD+CTRL+8                          { move-column-to-workspace 8; }
-    MOD+CTRL+9                          { move-column-to-workspace 9; }
+    MOD+SHIFT+1                          { move-column-to-workspace 1; }
+    MOD+SHIFT+2                          { move-column-to-workspace 2; }
+    MOD+SHIFT+3                          { move-column-to-workspace 3; }
+    MOD+SHIFT+4                          { move-column-to-workspace 4; }
+    MOD+SHIFT+5                          { move-column-to-workspace 5; }
+    MOD+SHIFT+6                          { move-column-to-workspace 6; }
+    MOD+SHIFT+7                          { move-column-to-workspace 7; }
+    MOD+SHIFT+8                          { move-column-to-workspace 8; }
+    MOD+SHIFT+9                          { move-column-to-workspace 9; }
 
     MOD+TAB                             { focus-workspace-previous; }
 
@@ -146,7 +147,8 @@ binds {
 
     // ─── Modes ───
     MOD+T                               { toggle-window-floating; }
-    MOD+F                               { fullscreen-window; }
+    MOD+F                               { maximize-column; }
+    MOD+SPACE                           { fullscreen-window; }
     MOD+W                               { toggle-column-tabbed-display; }
 
     // ─── Screenshots ───
@@ -179,7 +181,7 @@ binds {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 
     layout {
-        gaps 16 // Gap between windows
+        gaps 7 // Gap between windows
         center-focused-column "never" // Don’t auto-center focused column
 
         preset-column-widths {
