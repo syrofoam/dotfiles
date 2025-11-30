@@ -14,7 +14,7 @@ input {
 
     touchpad {
         tap // Enable tap-to-click
-        natural-scroll // Enable natural (macOS-style) scrolling
+        //natural-scroll // Enable natural (macOS-style) scrolling
     }
 
     focus-follows-mouse // Automatically focus windows under the mouse pointer
