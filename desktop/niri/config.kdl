@@ -11,7 +11,13 @@ input {
         }
         numlock // Enable numlock on startup
     }
-
+    mouse {
+        // off
+        // natural-scroll
+        accel-speed 0.1
+        // accel-profile "flat"
+        // scroll-method "no-scroll"
+    }
     touchpad {
         tap // Enable tap-to-click
         accel-profile "flat"
@@ -88,10 +94,10 @@ binds {
     MOD+CTRL+HOME                       { move-column-to-first; }
     MOD+CTRL+END                        { move-column-to-last; }
 
-    MOD+SHIFT+LEFT                      { focus-monitor-left; }
-    MOD+SHIFT+RIGHT                     { focus-monitor-right; }
-    MOD+SHIFT+UP                        { focus-monitor-up; }
-    MOD+SHIFT+DOWN                      { focus-monitor-down; }
+    MOD+ALT+LEFT                        { focus-monitor-left; }
+    MOD+ALT+RIGHT                       { focus-monitor-right; }
+    MOD+ALT+UP                          { focus-monitor-up; }
+    MOD+ALT+DOWN                        { focus-monitor-down; }
 
     MOD+SHIFT+CTRL+LEFT                 { move-column-to-monitor-left; }
     MOD+SHIFT+CTRL+RIGHT                { move-column-to-monitor-right; }
@@ -140,10 +146,10 @@ binds {
     MOD+CTRL+F                          { expand-column-to-available-width; }
     MOD+C                               { center-column; }
     MOD+CTRL+C                          { center-visible-columns; }
-    MOD+MINUS                           { set-column-width "-10%"; }
-    MOD+EQUAL                           { set-column-width "+10%"; }
-    MOD+SHIFT+MINUS                     { set-window-height "-10%"; }
-    MOD+SHIFT+EQUAL                     { set-window-height "+10%"; }
+    MOD+SHIFT+LEFT                      { set-column-width "-5%"; }
+    MOD+SHIFT+RIGHT                     { set-column-width "+5%"; }
+    MOD+SHIFT+DOWN                      { set-window-height "-5%"; }
+    MOD+SHIFT+UP                        { set-window-height "+5"; }
 
     // ─── Modes ───
     MOD+T                               { toggle-window-floating; }
@@ -163,7 +169,7 @@ binds {
 
     // ─── Exit / Power ───
     CTRL+ALT+DELETE                     { quit; } // Also quits Niri MOD+SHIFT+P                         { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
-    MOD+O                               repeat=false { toggle-overview; }
+    MOD+S                               repeat=false { toggle-overview; }
 }
 
 // ────────────── Startup Applications ──────────────
