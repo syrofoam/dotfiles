@@ -146,10 +146,10 @@ binds {
     MOD+CTRL+F                          { expand-column-to-available-width; }
     MOD+C                               { center-column; }
     MOD+CTRL+C                          { center-visible-columns; }
-    MOD+SHIFT+LEFT                      { set-column-width "-5%"; }
-    MOD+SHIFT+RIGHT                     { set-column-width "+5%"; }
-    MOD+SHIFT+DOWN                      { set-window-height "-5%"; }
-    MOD+SHIFT+UP                        { set-window-height "+5"; }
+    MOD+SHIFT+LEFT                      { set-column-width "-4%"; }
+    MOD+SHIFT+RIGHT                     { set-column-width "+2%"; }
+    MOD+SHIFT+DOWN                      { set-window-height "-8"; }
+    MOD+SHIFT+UP                        { set-window-height "+8"; }
 
     // ─── Modes ───
     MOD+T                               { toggle-window-floating; }
