@@ -180,7 +180,9 @@ binds {
     spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
     spawn-sh-at-startup "swww img /usr/share/wallpapers/cachyos-wallpapers/Skyscraper.png" // Set wallpaper
     spawn-sh-at-startup "waybar" // Launch waybar
-
+    spawn-at-startup "swayidle" "-w" \
+        "timeout" "600" "niri msg action power-off-monitors" \
+        "resume" "niri msg action power-on-monitors"
     prefer-no-csd // Disable program decorations
     screenshot-path null // Disable screenshot saving
 
